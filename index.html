@@ -8,13 +8,29 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1e90ff, #007acc);
-            color: white;
+            height: 100vh;
+            overflow-y: auto;
             font-family: Arial, sans-serif;
+            color: white;
             text-align: center;
             padding: 30px;
+            background: url('bacgnd.webp') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
         }
 
+        /* Blurred overlay container */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(10px);
+            z-index: -1;
+        }
+        
         h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
@@ -32,6 +48,8 @@
             margin: 20px auto;
             max-width: 800px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 1;
         }
 
         a {
@@ -46,28 +64,33 @@
         footer {
             margin-top: 30px;
             font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
+    <div class="overlay"></div>
     <h1>Shark OS Documentation</h1>
     <p>Everything you need to know about using and customizing Shark OS.</p>
 
     <div class="doc-section">
         <h2>Installation Guide</h2>
-        <p>Learn how to install Shark OS on your system step by step. <a href="#">Read More</a></p>
+        <p>Learn how to install Shark OS on your system step by step. <a href="/sharkwiki/pages/installdoc.html">Read More</a></p>
     </div>
 
     <div class="doc-section">
         <h2>Features & Customization</h2>
-        <p>Explore the powerful features and how to personalize Shark OS. <a href="#">Read More</a></p>
+        <p>Explore the powerful features and how to personalize Shark OS. <a href="/sharkwiki/pages/featuresdoc.html">Read More</a></p>
     </div>
 
     <div class="doc-section">
         <h2>Troubleshooting</h2>
-        <p>Encountered an issue? Find solutions here. <a href="#">Read More</a></p>
+        <p>Encountered an issue? Find solutions here. <a href="/sharkwiki/pages/troubleshootdoc.html">Read More</a></p>
     </div>
 
-    <footer>© 2025 Shark OS Documentation. All rights reserved.</footer>
+    <footer>
+        © 2025 Shark OS Documentation. All rights reserved.
+    </footer>
 </body>
 </html>
