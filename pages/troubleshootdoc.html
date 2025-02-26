@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharkOS Troubleshooting Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bacgnd.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .header-bar {
+            background-color: rgb(50, 50, 113);
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            box-sizing: border-box;
+        }
+        .header-bar img {
+            height: 60px;
+            position: center;
+
+        }
+        .header-bar .spacer {
+            flex-grow: 1;
+        }
+        .overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #00ff00;
+            font-size: 24px;
+            font-family: 'Courier New', monospace;
+            z-index: 1000;
+            animation: fadeOut 3s forwards;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; display: none; }
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 80px auto 50px auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .issue {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-left: 5px solid #007bff;
+            background: #e9f5ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-bar">
+        <img src="shark.png" alt="Shark Logo">
+        <h1> SharkOS Wiki</h1>
+        <img src="logo.png" alt="Logo">
+        
+    </div>
+    <div class="overlay">Initializing...<br>Decrypting SharkOS Troubleshooting Guide...</div>
+    <div class="container">
+        <h1>SharkOS Troubleshooting Guide</h1>
+        
+        <!-- Issue 1 -->
+        <div class="issue">
+            <h2>1. Installation Issues</h2>
+            <p><strong>Problem:</strong> SharkOS fails to install or gets stuck during setup.</p>
+            <p><strong>Solution:</strong> Ensure Secure Boot and TPM are disabled in BIOS. Use Rufus to create a bootable USB with "No TPM, No Secure Boot" options enabled.</p>
+        </div>
+        
+        <!-- Issue 2 -->
+        <div class="issue">
+            <h2>2. Missing Drivers</h2>
+            <p><strong>Problem:</strong> Wi-Fi, Bluetooth, or other drivers are missing.</p>
+            <p><strong>Solution:</strong> Use Snappy Driver Installer or download drivers manually from your PC manufacturer’s website.</p>
+        </div>
+        
+        <!-- Issue 3 -->
+        <div class="issue">
+            <h2>3. System Updates Not Working</h2>
+            <p><strong>Problem:</strong> SharkOS updates fail or do not appear.</p>
+            <p><strong>Solution:</strong> Enable update services and check for updates manually in Settings.</p>
+        </div>
+        
+        <!-- Issue 4 -->
+        <div class="issue">
+            <h2>4. App Compatibility Issues</h2>
+            <p><strong>Problem:</strong> Some applications do not open or crash.</p>
+            <p><strong>Solution:</strong> Install missing dependencies such as .NET Framework or Visual C++ Redistributables.</p>
+        </div>
+        
+        <!-- Issue 5 -->
+        <div class="issue">
+            <h2>5. Low Performance</h2>
+            <p><strong>Problem:</strong> System runs slower than expected.</p>
+            <p><strong>Solution:</strong> Enable High-Performance mode in Power Settings, disable unnecessary startup programs, and check for background processes.</p>
+        </div>
+        
+        <!-- Issue 6 -->
+        <div class="issue">
+            <h2>6. Audio Issues</h2>
+            <p><strong>Problem:</strong> No sound or distorted audio.</p>
+            <p><strong>Solution:</strong> Update or reinstall audio drivers, check volume settings, and ensure the correct output device is selected.</p>
+        </div>
+        
+        <!-- Issue 7 -->
+        <div class="issue">
+            <h2>7. Driver Conflicts</h2>
+            <p><strong>Problem:</strong> Newly installed drivers conflict with existing ones causing instability.</p>
+            <p><strong>Solution:</strong> Roll back or update conflicting drivers and ensure compatibility with SharkOS.</p>
+        </div>
+        
+        <!-- Issue 8 -->
+        <div class="issue">
+            <h2>8. BSOD Errors</h2>
+            <p><strong>Problem:</strong> Frequent Blue Screen of Death errors.</p>
+            <p><strong>Solution:</strong> Identify error codes, update or roll back drivers, and check for hardware issues.</p>
+        </div>
+        
+        <!-- Issue 9 -->
+        <div class="issue">
+            <h2>9. Compiling Kernel Modules</h2>
+            <p><strong>Problem:</strong> Errors occur during the compilation of kernel modules.</p>
+            <p><strong>Solution:</strong> Verify that all development tools are installed and check for compatibility issues with SharkOS kernel headers.</p>
+        </div>
+        
+        <!-- Issue 10 -->
+        <div class="issue">
+            <h2>10. Overheating</h2>
+            <p><strong>Problem:</strong> System overheats during heavy usage.</p>
+            <p><strong>Solution:</strong> Check cooling systems, update fan drivers, and clean internal components.</p>
+        </div>
+        
+        <!-- Issue 11 -->
+        <div class="issue">
+            <h2>11. Boot Loop</h2>
+            <p><strong>Problem:</strong> SharkOS enters a continuous boot loop.</p>
+            <p><strong>Solution:</strong> Repair the bootloader or perform a clean installation if boot files are corrupted.</p>
+        </div>
+        
+        <!-- Issue 12 -->
+        <div class="issue">
+            <h2>12. File System Corruption</h2>
+            <p><strong>Problem:</strong> Data corruption occurs due to improper shutdowns or disk errors.</p>
+            <p><strong>Solution:</strong> Run disk repair utilities and back up important data regularly.</p>
+        </div>
+        
+        <!-- Issue 13 -->
+        <div class="issue">
+            <h2>13. Network Connectivity Issues</h2>
+            <p><strong>Problem:</strong> Intermittent network drops or slow internet speeds.</p>
+            <p><strong>Solution:</strong> Update network drivers, reset network settings, or try a different network adapter.</p>
+        </div>
+        
+        <!-- Issue 14 -->
+        <div class="issue">
+            <h2>14. Graphics Driver Problems</h2>
+            <p><strong>Problem:</strong> Display issues or screen artifacts due to outdated/incompatible graphics drivers.</p>
+            <p><strong>Solution:</strong> Update to the latest graphics drivers or roll back if a recent update is unstable.</p>
+        </div>
+        
+        <!-- Issue 15 -->
+        <div class="issue">
+            <h2>15. Memory Leaks</h2>
+            <p><strong>Problem:</strong> Applications gradually consume more memory leading to system slowdown.</p>
+            <p><strong>Solution:</strong> Identify offending processes using Task Manager and apply patches or updates as needed.</p>
+        </div>
+        
+        <!-- Issue 16 -->
+        <div class="issue">
+            <h2>16. Security Vulnerabilities</h2>
+            <p><strong>Problem:</strong> Unpatched vulnerabilities exposing the system to exploits.</p>
+            <p><strong>Solution:</strong> Regularly update SharkOS and apply security patches.</p>
+        </div>
+        
+        <!-- Issue 17 -->
+        <div class="issue">
+            <h2>17. Virtualization Compatibility</h2>
+            <p><strong>Problem:</strong> Difficulties running virtual machines or emulators.</p>
+            <p><strong>Solution:</strong> Enable virtualization in BIOS and ensure the hypervisor software is compatible with SharkOS.</p>
+        </div>
+        
+        <!-- Issue 18 -->
+        <div class="issue">
+            <h2>18. Software Crashes</h2>
+            <p><strong>Problem:</strong> Critical applications crash unexpectedly.</p>
+            <p><strong>Solution:</strong> Check for software updates, reinstall problematic apps, and consult logs for error details.</p>
+        </div>
+        
+        <!-- Issue 19 -->
+        <div class="issue">
+            <h2>19. Update Rollbacks</h2>
+            <p><strong>Problem:</strong> System updates fail and automatically roll back.</p>
+            <p><strong>Solution:</strong> Check update logs and free up disk space or repair corrupted update files.</p>
+        </div>
+        
+        <!-- Issue 20 -->
+        <div class="issue">
+            <h2>20. Slow Boot Times</h2>
+            <p><strong>Problem:</strong> Extended boot times due to driver loading or misconfigurations.</p>
+            <p><strong>Solution:</strong> Optimize startup services and update the boot configuration.</p>
+        </div>
+        
+        <!-- Issue 21 -->
+        <div class="issue">
+            <h2>21. Application Freezes</h2>
+            <p><strong>Problem:</strong> Programs become unresponsive during operation.</p>
+            <p><strong>Solution:</strong> Monitor system resources and update or reinstall the affected applications.</p>
+        </div>
+        
+        <!-- Issue 22 -->
+        <div class="issue">
+            <h2>22. Input Device Issues</h2>
+            <p><strong>Problem:</strong> Touchpad, mouse, or keyboard input is laggy or unresponsive.</p>
+            <p><strong>Solution:</strong> Update input drivers or adjust settings in the control panel.</p>
+        </div>
+        
+        <!-- Issue 23 -->
+        <div class="issue">
+            <h2>23. USB Port Failures</h2>
+            <p><strong>Problem:</strong> Some USB ports fail to recognize devices.</p>
+            <p><strong>Solution:</strong> Check for driver updates or try using a powered USB hub.</p>
+        </div>
+        
+        <!-- Issue 24 -->
+        <div class="issue">
+            <h2>24. Bluetooth Connectivity</h2>
+            <p><strong>Problem:</strong> Bluetooth devices frequently disconnect or fail to pair.</p>
+            <p><strong>Solution:</strong> Update Bluetooth drivers and reset device pairings.</p>
+        </div>
+        
+        <!-- Issue 25 -->
+        <div class="issue">
+            <h2>25. Power Management Issues</h2>
+            <p><strong>Problem:</strong> Rapid battery drain or improper sleep/hibernate functions.</p>
+            <p><strong>Solution:</strong> Adjust power settings and update firmware for power management components.</p>
+        </div>
+        
+        <!-- Issue 26 -->
+        <div class="issue">
+            <h2>26. Firmware Update Failures</h2>
+            <p><strong>Problem:</strong> BIOS or firmware updates fail or corrupt the system.</p>
+            <p><strong>Solution:</strong> Follow manufacturer guidelines and ensure the update file is valid.</p>
+        </div>
+        
+        <!-- Issue 27 -->
+        <div class="issue">
+            <h2>27. Compatibility with Older Hardware</h2>
+            <p><strong>Problem:</strong> SharkOS may not fully support legacy hardware.</p>
+            <p><strong>Solution:</strong> Use compatibility modes or source community drivers where available.</p>
+        </div>
+        
+        <!-- Issue 28 -->
+        <div class="issue">
+            <h2>28. Software Installation Errors</h2>
+            <p><strong>Problem:</strong> Errors occur during the installation of software packages.</p>
+            <p><strong>Solution:</strong> Verify dependencies and use compatibility tools to run older installers.</p>
+        </div>
+        
+        <!-- Issue 29 -->
+        <div class="issue">
+            <h2>29. Virtual Memory Misconfiguration</h2>
+            <p><strong>Problem:</strong> Improper paging file settings leading to performance issues.</p>
+            <p><strong>Solution:</strong> Adjust virtual memory settings based on system requirements.</p>
+        </div>
+        
+        <!-- Issue 30 -->
+        <div class="issue">
+            <h2>30. High Disk Usage</h2>
+            <p><strong>Problem:</strong> Excessive disk I/O causing system hangs.</p>
+            <p><strong>Solution:</strong> Use disk cleanup tools and update disk drivers.</p>
+        </div>
+        
+        <!-- Issue 31 -->
+        <div class="issue">
+            <h2>31. Printer and Peripheral Issues</h2>
+            <p><strong>Problem:</strong> Connected peripherals such as printers are not recognized.</p>
+            <p><strong>Solution:</strong> Install or update the necessary drivers and check cable connections.</p>
+        </div>
+        
+        <!-- Issue 32 -->
+        <div class="issue">
+            <h2>32. Software Licensing Errors</h2>
+            <p><strong>Problem:</strong> License validation fails for certain software.</p>
+            <p><strong>Solution:</strong> Ensure correct license keys are used and verify system time settings.</p>
+        </div>
+        
+        <!-- Issue 33 -->
+        <div class="issue">
+            <h2>33. Touchscreen Calibration</h2>
+            <p><strong>Problem:</strong> Touchscreen input is inaccurate or unresponsive.</p>
+            <p><strong>Solution:</strong> Recalibrate the touchscreen using the provided utilities in SharkOS.</p>
+        </div>
+        
+        <!-- Issue 34 -->
+        <div class="issue">
+            <h2>34. File Permission Errors</h2>
+            <p><strong>Problem:</strong> Users encounter access denied errors when opening files.</p>
+            <p><strong>Solution:</strong> Adjust file and folder permissions or run applications as an administrator.</p>
+        </div>
+        
+        <!-- Issue 35 -->
+        <div class="issue">
+            <h2>35. Registry Corruption</h2>
+            <p><strong>Problem:</strong> System registry errors leading to instability.</p>
+            <p><strong>Solution:</strong> Use registry repair tools and create backups before making changes.</p>
+        </div>
+        
+        <!-- Issue 36 -->
+        <div class="issue">
+            <h2>36. Driver Update Failures</h2>
+            <p><strong>Problem:</strong> Automated driver updates result in system crashes.</p>
+            <p><strong>Solution:</strong> Manually update drivers or use a reliable driver management tool.</p>
+        </div>
+        
+        <!-- Issue 37 -->
+        <div class="issue">
+            <h2>37. 32-bit vs 64-bit Compatibility</h2>
+            <p><strong>Problem:</strong> 32-bit applications may not run properly on a 64-bit system.</p>
+            <p><strong>Solution:</strong> Use compatibility mode or install required 32-bit libraries.</p>
+        </div>
+        
+        <!-- Issue 38 -->
+        <div class="issue">
+            <h2>38. Boot Manager Issues</h2>
+            <p><strong>Problem:</strong> Problems with bootloader configuration cause startup failures.</p>
+            <p><strong>Solution:</strong> Repair the boot manager using recovery tools.</p>
+        </div>
+        
+        <!-- Issue 39 -->
+        <div class="issue">
+            <h2>39. Resource Allocation Problems</h2>
+            <p><strong>Problem:</strong> Inefficient multitasking and resource distribution slow down the system.</p>
+            <p><strong>Solution:</strong> Optimize settings and consider upgrading hardware for better performance.</p>
+        </div>
+        
+        <!-- Issue 40 -->
+        <div class="issue">
+            <h2>40. System Recovery Failures</h2>
+            <p><strong>Problem:</strong> Recovery options fail to restore the system after a crash.</p>
+            <p><strong>Solution:</strong> Create regular backups and use system restore points.</p>
+        </div>
+        
+        <!-- Issue 41 -->
+        <div class="issue">
+            <h2>41. Audio Sync Issues</h2>
+            <p><strong>Problem:</strong> Audio lags behind video or appears out of sync.</p>
+            <p><strong>Solution:</strong> Update multimedia codecs and check audio settings.</p>
+        </div>
+        
+        <!-- Issue 42 -->
+        <div class="issue">
+            <h2>42. Time Synchronization Problems</h2>
+            <p><strong>Problem:</strong> System clock drifts or fails to synchronize with time servers.</p>
+            <p><strong>Solution:</strong> Adjust time settings and verify NTP server configurations.</p>
+        </div>
+        
+        <!-- Issue 43 -->
+        <div class="issue">
+            <h2>43. DNS and Browsing Errors</h2>
+            <p><strong>Problem:</strong> Browser fails to resolve domain names or loads pages slowly.</p>
+            <p><strong>Solution:</strong> Flush DNS cache, update network drivers, and check router settings.</p>
+        </div>
+        
+        <!-- Issue 44 -->
+        <div class="issue">
+            <h2>44. File Indexing Delays</h2>
+            <p><strong>Problem:</strong> Search indexing takes too long, affecting system performance.</p>
+            <p><strong>Solution:</strong> Rebuild the index or adjust indexing settings to exclude unnecessary folders.</p>
+        </div>
+        
+        <!-- Issue 45 -->
+        <div class="issue">
+            <h2>45. Desktop Environment Glitches</h2>
+            <p><strong>Problem:</strong> Graphical glitches or erratic behavior in the desktop environment.</p>
+            <p><strong>Solution:</strong> Update the desktop manager and graphics drivers, and reset display settings.</p>
+        </div>
+        
+        <!-- Issue 46 -->
+        <div class="issue">
+            <h2>46. Update Installation Hangs</h2>
+            <p><strong>Problem:</strong> Software update installations freeze during the process.</p>
+            <p><strong>Solution:</strong> Restart the update service and ensure a stable internet connection.</p>
+        </div>
+        
+        <!-- Issue 47 -->
+        <div class="issue">
+            <h2>47. Application Sandbox Failures</h2>
+            <p><strong>Problem:</strong> Sandboxed applications fail to run due to security restrictions.</p>
+            <p><strong>Solution:</strong> Adjust security settings or run the application with elevated privileges.</p>
+        </div>
+        
+        <!-- Issue 48 -->
+        <div class="issue">
+            <h2>48. Hardware Acceleration Issues</h2>
+            <p><strong>Problem:</strong> Enabling GPU acceleration causes instability or graphical errors.</p>
+            <p><strong>Solution:</strong> Disable hardware acceleration in problematic applications or update GPU drivers.</p>
+        </div>
+        
+        <!-- Issue 49 -->
+        <div class="issue">
+            <h2>49. Benchmarking Inconsistencies</h2>
+            <p><strong>Problem:</strong> Performance benchmarks vary widely under similar conditions.</p>
+            <p><strong>Solution:</strong> Check background processes and ensure a consistent testing environment.</p>
+        </div>
+        
+        <!-- Issue 50 -->
+        <div class="issue">
+            <h2>50. System Log Errors</h2>
+            <p><strong>Problem:</strong> Frequent errors appear in system logs indicating underlying issues.</p>
+            <p><strong>Solution:</strong> Review log details, update system components, and address any reported errors.</p>
+        </div>
+    </div>
+</body>
+</html>
